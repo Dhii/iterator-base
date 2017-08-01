@@ -2,6 +2,7 @@
 
 namespace Dhii\Iterator\FuncTest;
 
+use Dhii\Iterator\IterationAwareTrait;
 use Dhii\Iterator\RecursiveIteratorInterface;
 use Xpmock\TestCase;
 
