@@ -12,7 +12,10 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^5.4 | ^7.0"
+        "php": "^5.4 | ^7.0",
+        "dhii/iterator-interface": "dev-task/initial-interfaces",
+        "dhii/iterator-abstract": "dev-task/initial-classes",
+        "dhii/data-key-value-aware-trait": "dev-task/initial-traits"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
@@ -28,5 +31,19 @@
     "scripts": {
         "test": "phpunit",
         "csfix": "php-cs-fixer fix -vvv"
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Dhii/iterator-interface"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Dhii/iterator-abstract"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Dhii/data-key-value-aware-trait"
+        }
+    ]
 }
