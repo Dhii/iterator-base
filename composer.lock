@@ -192,12 +192,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/iterator-abstract.git",
-                "reference": "d5aed1294195dc113ab1fe321502eaa32c2b1a03"
+                "reference": "f59e3223fbbc85152cf551d112384b49dda058c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/iterator-abstract/zipball/d5aed1294195dc113ab1fe321502eaa32c2b1a03",
-                "reference": "d5aed1294195dc113ab1fe321502eaa32c2b1a03",
+                "url": "https://api.github.com/repos/Dhii/iterator-abstract/zipball/f59e3223fbbc85152cf551d112384b49dda058c2",
+                "reference": "f59e3223fbbc85152cf551d112384b49dda058c2",
                 "shasum": ""
             },
             "require": {
@@ -237,7 +237,7 @@
                 "source": "https://github.com/Dhii/iterator-abstract/tree/task/initial-classes",
                 "issues": "https://github.com/Dhii/iterator-abstract/issues"
             },
-            "time": "2017-08-01 11:54:11"
+            "time": "2017-08-01 16:42:14"
         },
         {
             "name": "dhii/iterator-interface",
