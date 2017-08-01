@@ -35,11 +35,11 @@ trait IterationAwareTrait
      *
      * @since [*next-version*]
      *
-     * @param IterationInterface $iteration The iteration instance.
+     * @param IterationInterface|null $iteration The iteration instance.
      *
      * @return $this
      */
-    protected function _setIteration(IterationInterface $iteration)
+    protected function _setIteration(IterationInterface $iteration = null)
     {
         $this->iteration = $iteration;
 
