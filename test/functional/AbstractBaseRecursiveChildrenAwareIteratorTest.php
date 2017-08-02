@@ -33,7 +33,6 @@ class AbstractBaseRecursiveChildrenAwareIteratorTest extends TestCase
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
             ->_getCurrentIterableKey()
             ->_getCurrentIterableValue()
-            ->_getCurrentPath()
             ->_getElementPathSegment()
             ->_getInitialParentIterable()
             ->new();
