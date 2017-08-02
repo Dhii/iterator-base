@@ -10,7 +10,7 @@ use Traversable;
  *
  * @since [*next-version*]
  */
-class RecursiveIteration extends AbstractBaseIteration
+class RecursiveIteration extends AbstractBaseIteration implements RecursiveIterationInterface
 {
     /**
      * An array of path segments.
