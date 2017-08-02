@@ -5,11 +5,11 @@ namespace Dhii\Iterator;
 use Dhii\Data\Hierarchy\ChildrenAwareInterface;
 
 /**
- * Base functionality for a recursive iterator of children aware items.
+ * Common functionality for recursive iterators that iterate over children-aware items.
  *
  * @since [*next-version*]
  */
-abstract class AbstractBaseRecursiveChildrenAwareIterator extends AbstractBaseRecursiveIterator
+trait ChildrenAwareRecursiveIteratorTrait
 {
     /**
      *{@inheritdoc}

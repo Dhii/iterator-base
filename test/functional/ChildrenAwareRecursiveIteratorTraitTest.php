@@ -2,40 +2,41 @@
 
 namespace Dhii\Iterator\FuncTest;
 
-use Dhii\Data\Hierarchy\ChildrenAwareInterface;
-use stdClass;
 use Xpmock\TestCase;
-use Dhii\Iterator\AbstractBaseRecursiveChildrenAwareIterator;
+use Dhii\Iterator\ChildrenAwareRecursiveIteratorTrait;
 
 /**
- * Tests {@see Dhii\Iterator\AbstractBaseRecursiveChildrenAwareIterator}.
+ * Tests {@see Dhii\Iterator\ChildrenAwareRecursiveIteratorTrait}.
  *
  * @since [*next-version*]
  */
-class AbstractBaseRecursiveChildrenAwareIteratorTest extends TestCase
+class ChildrenAwareRecursiveIteratorTraitTest extends TestCase
 {
     /**
      * The classname of the test subject.
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\Iterator\AbstractBaseRecursiveChildrenAwareIterator';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\Iterator\ChildrenAwareRecursiveIteratorTrait';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
-     *
-     * @return AbstractBaseRecursiveChildrenAwareIterator
      */
     public function createInstance()
     {
-        $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-            ->_getCurrentIterableKey()
-            ->_getCurrentIterableValue()
-            ->_getElementPathSegment()
-            ->_getInitialParentIterable()
-            ->new();
+        // Methods to mock
+        $methods = [];
+        // Create mock
+        $mock = $this->getMockForTrait(
+            static::TEST_SUBJECT_CLASSNAME,  [],
+            '',
+            true,
+            true,
+            true,
+            $methods
+        );
 
         return $mock;
     }
@@ -52,39 +53,10 @@ class AbstractBaseRecursiveChildrenAwareIteratorTest extends TestCase
     public function createChildrenAwareInstance($children = [])
     {
         $mock = $this->mock('Dhii\\Data\\Hierarchy\\ChildrenAwareInterface')
-            ->getChildren($children)
-            ->hasChildren(count($children) > 0);
+                     ->getChildren($children)
+                     ->hasChildren(count($children) > 0);
 
         return $mock->new();
-    }
-
-    /**
-     * Tests whether a valid instance of the test subject can be created.
-     *
-     * @since [*next-version*]
-     */
-    public function testCanBeCreated()
-    {
-        $subject = $this->createInstance();
-
-        $this->assertInstanceOf(
-            static::TEST_SUBJECT_CLASSNAME, $subject,
-            'Subject is not a valid instance'
-        );
-
-        $this->assertInstanceOf(
-            'Dhii\\Iterator\\RecursiveIteratorInterface', $subject,
-            'Subject is not a valid instance'
-        );
-        $this->assertInstanceOf(
-            'Dhii\\Iterator\\IteratorInterface', $subject,
-            'Subject is not a valid instance'
-        );
-
-        $this->assertInstanceOf(
-            'Iterator', $subject,
-            'Subject is not a valid instance'
-        );
     }
 
     /**
@@ -125,4 +97,3 @@ class AbstractBaseRecursiveChildrenAwareIteratorTest extends TestCase
         $this->assertEmpty($reflect->_getElementChildren($notChildrenAware));
     }
 }
-
