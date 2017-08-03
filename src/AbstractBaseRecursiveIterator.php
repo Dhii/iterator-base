@@ -96,7 +96,7 @@ abstract class AbstractBaseRecursiveIterator extends AbstractRecursiveIterator i
      */
     protected function _isMode($mode)
     {
-        return $this->_getMode() & $mode;
+        return $this->_getMode() === $mode;
     }
 
     /**
