@@ -12,7 +12,7 @@ use Dhii\Data\Hierarchy\ChildrenAwareInterface;
 trait ChildrenAwareRecursiveIteratorTrait
 {
     /**
-     *{@inheritdoc}
+     * {@inheritdoc}
      *
      * @since [*next-version*]
      */
