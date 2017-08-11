@@ -7,7 +7,7 @@ use Xpmock\TestCase;
 use Dhii\Iterator\IterationAwareTrait;
 
 /**
- * Tests {@see Dhii\Iterator\IterationAwareTrait}.
+ * Tests {@see \Dhii\Iterator\IterationAwareTrait}.
  *
  * @since [*next-version*]
  */

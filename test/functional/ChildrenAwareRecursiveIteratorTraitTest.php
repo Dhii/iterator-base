@@ -6,7 +6,7 @@ use Xpmock\TestCase;
 use Dhii\Iterator\ChildrenAwareRecursiveIteratorTrait;
 
 /**
- * Tests {@see Dhii\Iterator\ChildrenAwareRecursiveIteratorTrait}.
+ * Tests {@see \Dhii\Iterator\ChildrenAwareRecursiveIteratorTrait}.
  *
  * @since [*next-version*]
  */

@@ -7,7 +7,7 @@ use ReflectionMethod;
 use Xpmock\TestCase;
 
 /**
- * Tests {@see Dhii\Iterator\KeyAwareIterableTrait}.
+ * Tests {@see \Dhii\Iterator\KeyAwareIterableTrait}.
  *
  * @since [*next-version*]
  */

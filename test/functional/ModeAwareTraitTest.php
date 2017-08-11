@@ -7,7 +7,7 @@ use Dhii\Iterator\RecursiveIteratorInterface;
 use Xpmock\TestCase;
 
 /**
- * Tests {@see Dhii\Iterator\ModeAwareTrait}.
+ * Tests {@see \Dhii\Iterator\ModeAwareTrait}.
  *
  * @since [*next-version*]
  */

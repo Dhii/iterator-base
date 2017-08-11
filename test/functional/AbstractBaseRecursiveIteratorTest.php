@@ -8,7 +8,7 @@ use Dhii\Iterator\AbstractBaseRecursiveIterator;
 use Dhii\Iterator\RecursiveIteratorInterface as R;
 
 /**
- * Tests {@see Dhii\Iterator\AbstractBaseRecursiveIterator}.
+ * Tests {@see \Dhii\Iterator\AbstractBaseRecursiveIterator}.
  *
  * @since [*next-version*]
  */

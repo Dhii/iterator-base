@@ -6,7 +6,7 @@ use Dhii\Iterator\AbstractBaseIteration;
 use Xpmock\TestCase;
 
 /**
- * Tests {@see Dhii\Iterator\AbstractBaseIteration}.
+ * Tests {@see \Dhii\Iterator\AbstractBaseIteration}.
  *
  * @since [*next-version*]
  */
