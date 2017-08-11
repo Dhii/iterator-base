@@ -3,18 +3,15 @@
 namespace Dhii\Iterator;
 
 /**
- * Functionality for something that is aware of a recursion mode.
+ * Functionality for something that is aware of an iteration mode.
  *
  * @since [*next-version*]
  */
 trait ModeAwareTrait
 {
     /**
-     * The recursion mode.
+     * The iteration mode.
      *
-     * @see RecursiveIteratorInterface::MODE_SELF_FIRST
-     * @see RecursiveIteratorInterface::MODE_CHILD_FIRST
-     * @see RecursiveIteratorInterface::MODE_LEAVES_ONLY
      * @since [*next-version*]
      *
      * @var int
@@ -22,7 +19,7 @@ trait ModeAwareTrait
     protected $mode;
 
     /**
-     * Retrieves the recursion mode.
+     * Retrieves the iteration mode.
      *
      * @since [*next-version*]
      *
@@ -34,11 +31,11 @@ trait ModeAwareTrait
     }
 
     /**
-     * Sets the recursion mode.
+     * Sets the iteration mode.
      *
      * @since [*next-version*]
      *
-     * @param int $mode The recursion mode.
+     * @param int $mode The iteration mode.
      *
      * @return $this
      */
