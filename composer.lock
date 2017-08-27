@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f511b011208bf920ac15d45b8907ec0a",
+    "content-hash": "3de36f4e9547764cc53d2eb0304f669b",
     "packages": [
         {
             "name": "dhii/data-hierarchy-interface",
@@ -49,6 +49,48 @@
             "time": "2017-07-25T10:01:23+00:00"
         },
         {
+            "name": "dhii/data-key-value-aware-abstract",
+            "version": "dev-task/initial-traits",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dhii/data-key-value-aware-abstract.git",
+                "reference": "15189f54ba2807afdcfda6d3b09d79fca047c24d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dhii/data-key-value-aware-abstract/zipball/15189f54ba2807afdcfda6d3b09d79fca047c24d",
+                "reference": "15189f54ba2807afdcfda6d3b09d79fca047c24d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 | ^7.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "<=0.3.2",
+                "dhii/php-cs-fixer-config": "dev-php-5.3",
+                "phpunit/phpunit": "^4.8",
+                "ptrofimov/xpmock": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dhii\\Data\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dhii Team",
+                    "email": "development@dhii.co"
+                }
+            ],
+            "description": "Traits for objects that are aware of a key, a value, or both.",
+            "time": "2017-06-21 11:16:16"
+        },
+        {
             "name": "dhii/data-key-value-aware-interface",
             "version": "v0.1",
             "source": {
@@ -89,59 +131,6 @@
             ],
             "description": "Interfaces that aim to increase interoperability of value objects",
             "time": "2017-01-21T17:35:30+00:00"
-        },
-        {
-            "name": "dhii/data-key-value-aware-trait",
-            "version": "dev-task/initial-traits",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Dhii/data-key-value-aware-trait.git",
-                "reference": "15189f54ba2807afdcfda6d3b09d79fca047c24d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/data-key-value-aware-trait/zipball/15189f54ba2807afdcfda6d3b09d79fca047c24d",
-                "reference": "15189f54ba2807afdcfda6d3b09d79fca047c24d",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.4 | ^7.0"
-            },
-            "require-dev": {
-                "codeclimate/php-test-reporter": "<=0.3.2",
-                "dhii/php-cs-fixer-config": "dev-php-5.3",
-                "phpunit/phpunit": "^4.8",
-                "ptrofimov/xpmock": "^1.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Dhii\\Data\\": "src"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "phpunit"
-                ],
-                "csfix": [
-                    "php-cs-fixer fix -vvv"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dhii Team",
-                    "email": "development@dhii.co"
-                }
-            ],
-            "description": "Traits for objects that are aware of a key, a value, or both.",
-            "support": {
-                "source": "https://github.com/Dhii/data-key-value-aware-trait/tree/task/initial-traits",
-                "issues": "https://github.com/Dhii/data-key-value-aware-trait/issues"
-            },
-            "time": "2017-06-21 11:16:16"
         },
         {
             "name": "dhii/data-path-aware-interface",
@@ -2354,7 +2343,7 @@
     "stability-flags": {
         "dhii/iterator-interface": 20,
         "dhii/iterator-abstract": 20,
-        "dhii/data-key-value-aware-trait": 20
+        "dhii/data-key-value-aware-abstract": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
