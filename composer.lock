@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "43e2107f11cedb6b35609375ea357d6e",
+    "content-hash": "8fad09835fff9f39f0b9a1a31c71b6c2",
     "packages": [
         {
             "name": "dhii/data-hierarchy-interface",
@@ -241,16 +241,16 @@
         },
         {
             "name": "dhii/iterator-interface",
-            "version": "dev-task/initial-interfaces",
+            "version": "dev-release/0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/iterator-interface.git",
-                "reference": "89b949c214fe6e49a7915e8aad85796642eff49e"
+                "reference": "e8e7d24408fd638eb7b862a377f7d5f5a40d6ae2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/iterator-interface/zipball/89b949c214fe6e49a7915e8aad85796642eff49e",
-                "reference": "89b949c214fe6e49a7915e8aad85796642eff49e",
+                "url": "https://api.github.com/repos/Dhii/iterator-interface/zipball/e8e7d24408fd638eb7b862a377f7d5f5a40d6ae2",
+                "reference": "e8e7d24408fd638eb7b862a377f7d5f5a40d6ae2",
                 "shasum": ""
             },
             "require": {
@@ -290,10 +290,10 @@
             ],
             "description": "Interfaces for standard iterators",
             "support": {
-                "source": "https://github.com/Dhii/iterator-interface/tree/task/initial-interfaces",
+                "source": "https://github.com/Dhii/iterator-interface/tree/release/0.1",
                 "issues": "https://github.com/Dhii/iterator-interface/issues"
             },
-            "time": "2017-07-26 10:32:42"
+            "time": "2017-08-15 15:42:55"
         },
         {
             "name": "dhii/stringable-interface",

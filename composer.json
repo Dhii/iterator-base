@@ -13,7 +13,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^5.4 | ^7.0",
-        "dhii/iterator-interface": "dev-task/initial-interfaces",
+        "dhii/iterator-interface": "dev-release/0.1",
         "dhii/iterator-abstract": "dev-task/initial-classes",
         "dhii/data-key-value-aware-trait": "dev-task/initial-traits"
     },
