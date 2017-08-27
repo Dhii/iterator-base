@@ -35,14 +35,6 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/Dhii/iterator-interface"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/Dhii/iterator-abstract"
-        },
-        {
-            "type": "vcs",
             "url": "https://github.com/Dhii/data-key-value-aware-trait"
         }
     ]
