@@ -3,7 +3,6 @@
 namespace Dhii\Iterator\FuncTest;
 
 use Xpmock\TestCase;
-use Dhii\Iterator\ChildrenAwareRecursiveIteratorTrait;
 
 /**
  * Tests {@see \Dhii\Iterator\ChildrenAwareRecursiveIteratorTrait}.
@@ -66,8 +65,8 @@ class ChildrenAwareRecursiveIteratorTraitTest extends TestCase
      */
     public function testIsElementHasChildren()
     {
-        $subject    = $this->createInstance();
-        $reflect    = $this->reflect($subject);
+        $subject = $this->createInstance();
+        $reflect = $this->reflect($subject);
 
         $noChildren = $this->createChildrenAwareInstance([]);
         $this->assertFalse($reflect->_isElementHasChildren($noChildren));
@@ -86,10 +85,10 @@ class ChildrenAwareRecursiveIteratorTraitTest extends TestCase
      */
     public function testIsElementGetChildren()
     {
-        $subject    = $this->createInstance();
-        $reflect    = $this->reflect($subject);
+        $subject = $this->createInstance();
+        $reflect = $this->reflect($subject);
 
-        $children   = [1, 'two', 'test', 'subArray' => ['a', 'b', 'c']];
+        $children = [1, 'two', 'test', 'subArray' => ['a', 'b', 'c']];
         $caInstance = $this->createChildrenAwareInstance($children);
         $this->assertEquals($children, $reflect->_getElementChildren($caInstance));
 

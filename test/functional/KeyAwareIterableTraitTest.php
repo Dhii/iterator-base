@@ -31,7 +31,7 @@ class KeyAwareIterableTraitTest extends TestCase
         $mock = $this->getMockForTrait(static::TEST_SUBJECT_CLASSNAME);
 
         $mock->method('_getCurrentIterableValue')
-             ->willReturnCallback(function(&$iterable) {
+             ->willReturnCallback(function (&$iterable) {
                 return current($iterable);
             });
 
@@ -62,8 +62,8 @@ class KeyAwareIterableTraitTest extends TestCase
      */
     public function testGetCurrentIterableKey()
     {
-        $subject  = $this->createInstance();
-        $reflect  = new ReflectionMethod($subject, '_getCurrentIterableKey');
+        $subject = $this->createInstance();
+        $reflect = new ReflectionMethod($subject, '_getCurrentIterableKey');
         $reflect->setAccessible(true);
 
         $iterable = [
@@ -86,19 +86,19 @@ class KeyAwareIterableTraitTest extends TestCase
     public function testGetElementPathSegment()
     {
         $subject = $this->createInstance();
-        $reflect  = new ReflectionMethod($subject, '_getElementPathSegment');
+        $reflect = new ReflectionMethod($subject, '_getElementPathSegment');
         $reflect->setAccessible(true);
 
         $keyAware = $this->createKeyAwareInstance('foobar-key');
         $this->assertEquals($keyAware->getKey(), $reflect->invokeArgs($subject, [
             'some-key', // key
-            $keyAware  // value
+            $keyAware,  // value
         ]));
 
         $fallbackKey = 'fallback-key';
         $this->assertEquals($fallbackKey, $reflect->invokeArgs($subject, [
             $fallbackKey,           // key
-            'no-a-key-aware-object' // value
+            'no-a-key-aware-object', // value
         ]));
     }
 }

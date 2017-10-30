@@ -64,7 +64,7 @@ class RecursiveIterationTest extends PHPUnit_Framework_TestCase
             'path',
             'to',
             'an',
-            'element'
+            'element',
         ]);
 
         $this->assertEquals($path, $subject->getPathSegments());
