@@ -143,6 +143,9 @@ class AbstractBaseRecursiveIteratorTest extends TestCase
     public function testNextCalled()
     {
         $subject = $this->createInstance();
+        $_subject = $this->reflect($subject);
+        $_subject->parents = [];
+        $_subject->pathSegments = [];
 
         $subject->mock()->_next([], null, $this->once());
 
@@ -185,6 +188,9 @@ class AbstractBaseRecursiveIteratorTest extends TestCase
     public function testValidCalled()
     {
         $subject = $this->createInstance();
+        $_subject = $this->reflect($subject);
+        $_subject->parents = [];
+        $_subject->pathSegments = [];
 
         $subject->mock()->_valid([], null, $this->once());
 
