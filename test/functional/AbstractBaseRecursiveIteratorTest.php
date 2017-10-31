@@ -39,6 +39,8 @@ class AbstractBaseRecursiveIteratorTest extends TestCase
             ->_getInitialParentIterable([])
             ->_isElementHasChildren(false)
             ->_getElementChildren([])
+            ->__()
+            ->_createInvalidArgumentException()
             ->new();
 
         return $mock;
