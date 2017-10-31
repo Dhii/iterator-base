@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "37447e63a2b94a55e6b52f847e8449d9",
+    "content-hash": "34c95f727e457a1d0b2d9368e4c93994",
     "packages": [
         {
             "name": "dhii/data-hierarchy-interface",
@@ -181,12 +181,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/iterator-abstract.git",
-                "reference": "02247b52f5a5bba8967b3613daffd8afe2603db4"
+                "reference": "c3780305b94af96d3761915bf4bdc29efe6da493"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/iterator-abstract/zipball/02247b52f5a5bba8967b3613daffd8afe2603db4",
-                "reference": "02247b52f5a5bba8967b3613daffd8afe2603db4",
+                "url": "https://api.github.com/repos/Dhii/iterator-abstract/zipball/c3780305b94af96d3761915bf4bdc29efe6da493",
+                "reference": "c3780305b94af96d3761915bf4bdc29efe6da493",
                 "shasum": ""
             },
             "require": {
@@ -205,14 +205,7 @@
                     "Dhii\\Iterator\\": "src"
                 }
             },
-            "scripts": {
-                "test": [
-                    "phpunit"
-                ],
-                "csfix": [
-                    "php-cs-fixer fix -vvv"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -222,11 +215,7 @@
                     "email": "development@dhii.co"
                 }
             ],
-            "support": {
-                "source": "https://github.com/Dhii/iterator-abstract/tree/develop",
-                "issues": "https://github.com/Dhii/iterator-abstract/issues"
-            },
-            "time": "2017-08-27 12:58:34"
+            "time": "2017-10-30 14:58:05"
         },
         {
             "name": "dhii/iterator-interface",
