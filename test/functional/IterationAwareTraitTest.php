@@ -5,6 +5,7 @@ namespace Dhii\Iterator\Test;
 use Dhii\Iterator\IterationInterface;
 use Xpmock\TestCase;
 use Dhii\Iterator\IterationAwareTrait;
+use InvalidArgumentException;
 
 /**
  * Tests {@see \Dhii\Iterator\IterationAwareTrait}.
@@ -39,6 +40,34 @@ class IterationAwareTraitTest extends TestCase
             /* methods */ []
         );
 
+        $mock->method('__')
+                ->will($this->returnArgument(0));
+        $mock->method('_createInvalidArgumentException')
+                ->will($this->returnCallback(function ($message) {
+                    return $this->createInvalidArgumentException($message);
+                }));
+
+        return $mock;
+    }
+
+    /**
+     * Creates a new Invalid Argument exception.
+     *
+     * @since [*next-version*]
+     *
+     * @param string $message The error message.
+     *
+     * @return InvalidArgumentException The new exception.
+     */
+    public function createInvalidArgumentException($message = '')
+    {
+        $mock = $this->getMockBuilder('InvalidArgumentException')
+                ->setMethods(['getMessage'])
+                ->getMock();
+
+        $mock->method('getMessage')
+                ->will($this->returnValue($message));
+
         return $mock;
     }
 
@@ -65,11 +94,43 @@ class IterationAwareTraitTest extends TestCase
      */
     public function testGetSetIteration()
     {
+        $data = $this->createIteration();
         $subject = $this->createInstance();
         $reflect = $this->reflect($subject);
 
-        $reflect->_setIteration($iteration = $this->createIteration());
+        $reflect->_setIteration($data);
 
-        $this->assertSame($iteration, $reflect->_getIteration());
+        $this->assertSame($data, $reflect->_getIteration());
+    }
+
+    /**
+     * Tests that a null value can be successfully set and retrieved.
+     *
+     * @since [*next-version*]
+     */
+    public function testGetSetIterationNull()
+    {
+        $data = null;
+        $subject = $this->createInstance();
+        $reflect = $this->reflect($subject);
+
+        $reflect->_setIteration($data);
+
+        $this->assertSame($data, $reflect->_getIteration());
+    }
+
+    /**
+     * Tests that setting an invalid iteration fails correctly.
+     *
+     * @since [*next-version*]
+     */
+    public function testGetSetIterationFailure()
+    {
+        $data = new \stdClass();
+        $subject = $this->createInstance();
+        $reflect = $this->reflect($subject);
+
+        $this->setExpectedException('InvalidArgumentException');
+        $reflect->_setIteration($data);
     }
 }
