@@ -9,14 +9,30 @@ use Dhii\Iterator\Exception\IteratorExceptionInterface;
  *
  * @since [*next-version*]
  */
-abstract class AbstractBaseRecursiveIterator extends AbstractRecursiveIterator implements RecursiveIteratorInterface
+abstract class AbstractBaseRecursiveIterator implements RecursiveIteratorInterface
 {
+	/*
+	 * Provides basic iterator functionality and recursive iterator functionality, respectively.
+	 *
+	 * @since [*next-version*]
+	 */
+	use IteratorTrait, RecursiveIteratorTrait {
+		RecursiveIteratorTrait::_valid insteadof IteratorTrait;
+	}
+
     /*
      * Adds recursion mode awareness.
      *
      * @since [*next-version*]
      */
     use ModeAwareTrait;
+
+	/*
+	 * Provides functionality for determining recursion mode.
+	 *
+	 * @since [*next-version*]
+	 */
+    use IsModeCapableTrait;
 
     /*
      * Adds current temporary iteration instance awareness.
@@ -87,16 +103,6 @@ abstract class AbstractBaseRecursiveIterator extends AbstractRecursiveIterator i
     public function getIteration()
     {
         return $this->_getIteration();
-    }
-
-    /**
-     * {@inheritdoc}
-     *
-     * @since [*next-version*]
-     */
-    protected function _isMode($mode)
-    {
-        return $this->_getMode() === $mode;
     }
 
     /**
