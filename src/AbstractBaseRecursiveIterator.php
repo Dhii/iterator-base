@@ -41,6 +41,13 @@ abstract class AbstractBaseRecursiveIterator implements RecursiveIteratorInterfa
      */
     use IterationAwareTrait;
 
+    /*
+     * Provides functionality for creating recursive iteration instances.
+     *
+     * @since [*next-version*]
+     */
+    use CreateRecursiveIterationCapableTrait;
+
     /**
      * {@inheritdoc}
      *
@@ -103,15 +110,5 @@ abstract class AbstractBaseRecursiveIterator implements RecursiveIteratorInterfa
     public function getIteration()
     {
         return $this->_getIteration();
-    }
-
-    /**
-     * {@inheritdoc}
-     *
-     * @since [*next-version*]
-     */
-    protected function _createRecursiveIteration($key, $value, $pathSegments = [])
-    {
-        return new RecursiveIteration($key, $value, $pathSegments);
     }
 }
