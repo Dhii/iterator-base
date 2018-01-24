@@ -14,7 +14,7 @@
     "require": {
         "php": "^5.4 | ^7.0",
         "dhii/iterator-interface": "dev-release/0.1",
-        "dhii/iterator-abstract": "dev-develop",
+        "dhii/iterator-abstract": "^0.1",
         "dhii/data-key-value-aware-abstract": "dev-develop"
     },
     "require-dev": {

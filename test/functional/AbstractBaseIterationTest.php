@@ -75,6 +75,8 @@ class AbstractBaseIterationTest extends TestCase
      */
     public function testGetValue()
     {
+    	date_default_timezone_set('UTC');
+
         $subject = $this->createInstance();
         $reflect = $this->reflect($subject);
 

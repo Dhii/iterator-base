@@ -53,8 +53,6 @@ class RecursiveIteration extends AbstractBaseIteration implements RecursiveItera
      * @since [*next-version*]
      *
      * @param string[]|Stringable[]|Traversable $path A list of path segments.
-     *
-     * @return $this
      */
     protected function _setPathSegments($path)
     {
