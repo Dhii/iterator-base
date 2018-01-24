@@ -15,7 +15,10 @@
         "php": "^5.4 | ^7.0",
         "dhii/iterator-interface": "dev-release/0.1",
         "dhii/iterator-abstract": "^0.1",
-        "dhii/data-key-value-aware-abstract": "dev-develop"
+        "dhii/data-key-value-aware-abstract": "dev-develop",
+        "dhii/normalization-helper-base": "^0.1",
+        "dhii/exception-helper-base": "^0.1",
+        "dhii/i18n-helper-base": "^0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
