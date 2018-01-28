@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "17998868dbd1e1a2331d1fad979ef324",
+    "content-hash": "65488a7ba8dfbe0e0f0a9a3917ca1d74",
     "packages": [
         {
             "name": "dhii/data-hierarchy-interface",
@@ -50,7 +50,7 @@
         },
         {
             "name": "dhii/data-key-value-aware-abstract",
-            "version": "dev-develop",
+            "version": "v0.1-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/data-key-value-aware-abstract.git",
@@ -571,7 +571,7 @@
         },
         {
             "name": "dhii/normalization-helper-base",
-            "version": "dev-develop",
+            "version": "v0.1-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/normalization-helper-base.git",
