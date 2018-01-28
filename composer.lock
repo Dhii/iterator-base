@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1389b7f70e696ac031a02efa5cbf1ad4",
+    "content-hash": "251c3d9d1afb7056a713aec961a59522",
     "packages": [
         {
             "name": "dhii/data-hierarchy-interface",
@@ -186,12 +186,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/exception.git",
-                "reference": "34cc34929e78f8fb8881cdb8793d69e721d01be7"
+                "reference": "d58f4d2dc2abb79b468781f50dc61be92185782c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/exception/zipball/34cc34929e78f8fb8881cdb8793d69e721d01be7",
-                "reference": "34cc34929e78f8fb8881cdb8793d69e721d01be7",
+                "url": "https://api.github.com/repos/Dhii/exception/zipball/d58f4d2dc2abb79b468781f50dc61be92185782c",
+                "reference": "d58f4d2dc2abb79b468781f50dc61be92185782c",
                 "shasum": ""
             },
             "require": {
@@ -228,7 +228,7 @@
                 }
             ],
             "description": "Standards-compliant exception classes",
-            "time": "2017-12-28T13:33:50+00:00"
+            "time": "2018-01-25T20:56:20+00:00"
         },
         {
             "name": "dhii/exception-helper-base",
@@ -236,12 +236,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/exception-helper-base.git",
-                "reference": "121a5da29153df247c11465ae04590beac897613"
+                "reference": "47411e73ce77e10ffe96e7b9fcce7bb96fb5e9ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/exception-helper-base/zipball/121a5da29153df247c11465ae04590beac897613",
-                "reference": "121a5da29153df247c11465ae04590beac897613",
+                "url": "https://api.github.com/repos/Dhii/exception-helper-base/zipball/47411e73ce77e10ffe96e7b9fcce7bb96fb5e9ef",
+                "reference": "47411e73ce77e10ffe96e7b9fcce7bb96fb5e9ef",
                 "shasum": ""
             },
             "require": {
@@ -280,7 +280,7 @@
                 }
             ],
             "description": "Base functionality for exception helpers",
-            "time": "2017-12-28T13:56:48+00:00"
+            "time": "2018-01-25T21:27:12+00:00"
         },
         {
             "name": "dhii/exception-interface",
@@ -288,12 +288,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/exception-interface.git",
-                "reference": "0605da67fad415560023ff4d387f310642f7648e"
+                "reference": "a1fb5a8c55132f53dfb5312d4e15842c19bb4d5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/exception-interface/zipball/0605da67fad415560023ff4d387f310642f7648e",
-                "reference": "0605da67fad415560023ff4d387f310642f7648e",
+                "url": "https://api.github.com/repos/Dhii/exception-interface/zipball/a1fb5a8c55132f53dfb5312d4e15842c19bb4d5e",
+                "reference": "a1fb5a8c55132f53dfb5312d4e15842c19bb4d5e",
                 "shasum": ""
             },
             "require": {
@@ -328,7 +328,7 @@
                 }
             ],
             "description": "Interfaces for most common exceptions",
-            "time": "2017-12-28T08:50:05+00:00"
+            "time": "2018-01-28T10:24:29+00:00"
         },
         {
             "name": "dhii/i18n-helper-base",
@@ -428,12 +428,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/iterator-abstract.git",
-                "reference": "934bf05f20584a28c78fe0ab12e8600c68f4a5fc"
+                "reference": "211370b385b1dad6c45b94ab678a63690cac25b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/iterator-abstract/zipball/934bf05f20584a28c78fe0ab12e8600c68f4a5fc",
-                "reference": "934bf05f20584a28c78fe0ab12e8600c68f4a5fc",
+                "url": "https://api.github.com/repos/Dhii/iterator-abstract/zipball/211370b385b1dad6c45b94ab678a63690cac25b5",
+                "reference": "211370b385b1dad6c45b94ab678a63690cac25b5",
                 "shasum": ""
             },
             "require": {
@@ -467,26 +467,27 @@
                     "email": "development@dhii.co"
                 }
             ],
-            "time": "2018-01-23T14:36:00+00:00"
+            "time": "2018-01-24T11:51:26+00:00"
         },
         {
             "name": "dhii/iterator-interface",
-            "version": "dev-release/0.1",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/iterator-interface.git",
-                "reference": "e8e7d24408fd638eb7b862a377f7d5f5a40d6ae2"
+                "reference": "825426b779c99047d4ec0983f7488a0f9aefa5f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/iterator-interface/zipball/e8e7d24408fd638eb7b862a377f7d5f5a40d6ae2",
-                "reference": "e8e7d24408fd638eb7b862a377f7d5f5a40d6ae2",
+                "url": "https://api.github.com/repos/Dhii/iterator-interface/zipball/825426b779c99047d4ec0983f7488a0f9aefa5f5",
+                "reference": "825426b779c99047d4ec0983f7488a0f9aefa5f5",
                 "shasum": ""
             },
             "require": {
                 "dhii/data-hierarchy-interface": "^0.1",
                 "dhii/data-key-value-aware-interface": "^0.1",
                 "dhii/data-path-aware-interface": "^0.1",
+                "dhii/exception-interface": "^0.1 | ^0.2",
                 "php": "^5.3 | ^7.0"
             },
             "require-dev": {
@@ -496,6 +497,11 @@
                 "ptrofimov/xpmock": "^1.1"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Dhii\\Iterator\\": "src"
@@ -512,7 +518,7 @@
                 }
             ],
             "description": "Interfaces for standard iterators",
-            "time": "2017-08-15T15:42:55+00:00"
+            "time": "2018-01-28T10:36:52+00:00"
         },
         {
             "name": "dhii/normalization-helper-base",
@@ -520,12 +526,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/normalization-helper-base.git",
-                "reference": "eaff843d7f06690ba2030749616253b290aaf86e"
+                "reference": "b1742c2682714fca4da91764ec639168df862c0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/normalization-helper-base/zipball/eaff843d7f06690ba2030749616253b290aaf86e",
-                "reference": "eaff843d7f06690ba2030749616253b290aaf86e",
+                "url": "https://api.github.com/repos/Dhii/normalization-helper-base/zipball/b1742c2682714fca4da91764ec639168df862c0a",
+                "reference": "b1742c2682714fca4da91764ec639168df862c0a",
                 "shasum": ""
             },
             "require": {
@@ -560,7 +566,7 @@
                 }
             ],
             "description": "Functionality for normalizing values.",
-            "time": "2017-12-15T09:52:21+00:00"
+            "time": "2018-01-26T01:01:38+00:00"
         },
         {
             "name": "dhii/stringable-interface",
@@ -2455,10 +2461,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "dhii/iterator-interface": 20,
-        "dhii/data-key-value-aware-abstract": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
