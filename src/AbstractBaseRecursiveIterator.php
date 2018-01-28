@@ -11,14 +11,14 @@ use Dhii\Iterator\Exception\IteratorExceptionInterface;
  */
 abstract class AbstractBaseRecursiveIterator implements RecursiveIteratorInterface
 {
-	/*
-	 * Provides basic iterator functionality and recursive iterator functionality, respectively.
-	 *
-	 * @since [*next-version*]
-	 */
-	use IteratorTrait, RecursiveIteratorTrait {
-		RecursiveIteratorTrait::_valid insteadof IteratorTrait;
-	}
+    /*
+     * Provides basic iterator functionality and recursive iterator functionality, respectively.
+     *
+     * @since [*next-version*]
+     */
+    use IteratorTrait, RecursiveIteratorTrait {
+        RecursiveIteratorTrait::_valid insteadof IteratorTrait;
+    }
 
     /*
      * Adds recursion mode awareness.
@@ -27,11 +27,11 @@ abstract class AbstractBaseRecursiveIterator implements RecursiveIteratorInterfa
      */
     use ModeAwareTrait;
 
-	/*
-	 * Provides functionality for determining recursion mode.
-	 *
-	 * @since [*next-version*]
-	 */
+    /*
+     * Provides functionality for determining recursion mode.
+     *
+     * @since [*next-version*]
+     */
     use IsModeCapableTrait;
 
     /*

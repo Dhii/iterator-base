@@ -2,7 +2,6 @@
 
 namespace Dhii\Iterator\UnitTest;
 
-
 use Dhii\Iterator\AbstractBaseRecursiveIterator as TestSubject;
 use Dhii\Iterator\RecursiveIterationInterface;
 use Xpmock\TestCase;
@@ -241,7 +240,7 @@ class AbstractBaseRecursiveIteratorTest extends TestCase
      */
     public function testValid()
     {
-        $isValid = (bool)rand(0, 1);
+        $isValid = (bool) rand(0, 1);
         $subject = $this->createInstance(['_valid']);
         $_subject = $this->reflect($subject);
 
