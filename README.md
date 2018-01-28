@@ -1,4 +1,4 @@
-# Dhii Team - Iterator Base
+# Dhii - Iterator Base
 
 [![Build Status](https://travis-ci.org/dhii/iterator-base.svg?branch=develop)](https://travis-ci.org/dhii/iterator-base)
 [![Code Climate](https://codeclimate.com/github/Dhii/iterator-base/badges/gpa.svg)](https://codeclimate.com/github/Dhii/iterator-base)
