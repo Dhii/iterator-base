@@ -120,10 +120,12 @@ class RecursiveIterationTest extends TestCase
     public function testGetPathSegments()
     {
         $segments = array_fill(0, rand(1, 9), uniqid('segment'));
-        $subject = $this->createInstance(null, [], true);
+        $subject = $this->createInstance(['_getPathSegments'], [], true);
         $_subject = $this->reflect($subject);
 
-        $_subject->path = $segments;
+        $subject->expects($this->exactly(1))
+            ->method('_getPathSegments')
+            ->will($this->returnValue($segments));
 
         $result = $subject->getPathSegments();
         $this->assertEquals($segments, $result, 'Retrieved paths segments are wrong');
@@ -136,15 +138,15 @@ class RecursiveIterationTest extends TestCase
      */
     public function testGetDepth()
     {
-        $segments = [uniqid('segment'), uniqid('segment')];
-        $subject = $this->createInstance(['getPathSegments'], [], true);
+        $depth = rand(1, 9);
+        $subject = $this->createInstance(['_getDepth'], [], true);
         $_subject = $this->reflect($subject);
 
         $subject->expects($this->exactly(1))
-                ->method('getPathSegments')
-                ->will($this->returnValue($segments));
+            ->method('_getDepth')
+            ->will($this->returnValue($depth));
 
         $result = $subject->getDepth();
-        $this->assertEquals(count($segments) - 1, $result, 'Retrieved depth is wrong');
+        $this->assertEquals($depth, $result, 'Retrieved paths segments are wrong');
     }
 }
