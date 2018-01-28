@@ -2,6 +2,10 @@
 
 namespace Dhii\Iterator;
 
+use Dhii\Exception\CreateInvalidArgumentExceptionCapableTrait;
+use Dhii\I18n\StringTranslatingTrait;
+use Dhii\Util\Normalization\NormalizeStringCapableTrait;
+
 /**
  * Concrete implementation of an iteration.
  *
@@ -9,6 +13,24 @@ namespace Dhii\Iterator;
  */
 class Iteration extends AbstractBaseIteration
 {
+    /* String normalization capability.
+     *
+     * @since [*next-version*]
+     */
+    use NormalizeStringCapableTrait;
+
+    /* String translating capability.
+     *
+     * @since [*next-version*]
+     */
+    use StringTranslatingTrait;
+
+    /* Ability to create Invalid Argument exceptions.
+     *
+     * @since [*next-version*]
+     */
+    use CreateInvalidArgumentExceptionCapableTrait;
+
     /**
      * Constructor.
      *
