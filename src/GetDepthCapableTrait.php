@@ -3,6 +3,7 @@
 namespace Dhii\Iterator;
 
 use Dhii\Util\String\StringableInterface as Stringable;
+use stdClass;
 use Traversable;
 
 /**
@@ -21,7 +22,7 @@ trait GetDepthCapableTrait
      */
     protected function _getDepth()
     {
-        return count($this->_getPathSegments()) - 1;
+        return $this->_countIterable($this->_getPathSegments()) - 1;
     }
 
     /**
@@ -32,4 +33,15 @@ trait GetDepthCapableTrait
      * @return string[]|Stringable[]|Traversable The list of segments.
      */
     abstract protected function _getPathSegments();
+
+    /**
+     * Counts the elements in an iterable.
+     *
+     * @since [*next-version*]
+     *
+     * @param array|stdClass|Traversable $iterable The iterable to count. Must be finite.
+     *
+     * @return int The amount of elements.
+     */
+    abstract protected function _countIterable($iterable);
 }
