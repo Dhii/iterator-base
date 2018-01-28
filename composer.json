@@ -18,7 +18,8 @@
         "dhii/data-key-value-aware-abstract": "^0.1",
         "dhii/normalization-helper-base": "^0.1",
         "dhii/exception-helper-base": "^0.1",
-        "dhii/i18n-helper-base": "^0.1"
+        "dhii/i18n-helper-base": "^0.1",
+        "dhii/iterator-helper-base": "^0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",

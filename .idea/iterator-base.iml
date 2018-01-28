@@ -13,6 +13,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/exception-helper-base" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/i18n-helper-base" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/i18n-interface" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/iterator-helper-base" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/normalization-helper-base" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/stringable-interface" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
@@ -60,6 +61,7 @@
           <root url="file://$MODULE_DIR$/vendor/dhii/exception-helper-base" />
           <root url="file://$MODULE_DIR$/vendor/dhii/i18n-helper-base" />
           <root url="file://$MODULE_DIR$/vendor/dhii/i18n-interface" />
+          <root url="file://$MODULE_DIR$/vendor/dhii/iterator-helper-base" />
           <root url="file://$MODULE_DIR$/vendor/dhii/normalization-helper-base" />
           <root url="file://$MODULE_DIR$/vendor/dhii/stringable-interface" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
@@ -103,6 +105,7 @@
           <root url="file://$MODULE_DIR$/vendor/dhii/exception-helper-base" />
           <root url="file://$MODULE_DIR$/vendor/dhii/i18n-helper-base" />
           <root url="file://$MODULE_DIR$/vendor/dhii/i18n-interface" />
+          <root url="file://$MODULE_DIR$/vendor/dhii/iterator-helper-base" />
           <root url="file://$MODULE_DIR$/vendor/dhii/normalization-helper-base" />
           <root url="file://$MODULE_DIR$/vendor/dhii/stringable-interface" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
