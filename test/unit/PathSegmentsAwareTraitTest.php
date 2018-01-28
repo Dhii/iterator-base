@@ -153,7 +153,7 @@ class PathSegmentsAwareTraitTest extends TestCase
      */
     public function testGetPathSegments()
     {
-        $segments = array_fill(0, rand(0, 9), uniqid('segment'));
+        $segments = array_fill(0, rand(1, 9), uniqid('segment'));
         $subject = $this->createInstance();
         $_subject = $this->reflect($subject);
 
