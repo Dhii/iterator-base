@@ -130,12 +130,15 @@ class GetDepthCapableTraitTest extends TestCase
     public function testGetDepth()
     {
         $segments = [uniqid('segment'), uniqid('segment')];
-        $subject = $this->createInstance(['_getPathSegments']);
+        $subject = $this->createInstance(['_getPathSegments', '_countIterable']);
         $_subject = $this->reflect($subject);
 
         $subject->expects($this->exactly(1))
             ->method('_getPathSegments')
             ->will($this->returnValue($segments));
+        $subject->expects($this->exactly(1))
+            ->method('_countIterable')
+            ->will($this->returnValue(count($segments)));
 
         $result = $_subject->_getDepth();
         $this->assertEquals(count($segments) - 1, $result, 'Retrieved depth is wrong');
