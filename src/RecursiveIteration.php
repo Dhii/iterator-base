@@ -2,6 +2,12 @@
 
 namespace Dhii\Iterator;
 
+use Dhii\Exception\CreateInvalidArgumentExceptionCapableTrait;
+use Dhii\Exception\CreateOutOfRangeExceptionCapableTrait;
+use Dhii\I18n\StringTranslatingTrait;
+use Dhii\Util\Normalization\NormalizeIntCapableTrait;
+use Dhii\Util\Normalization\NormalizeIterableCapableTrait;
+use Dhii\Util\Normalization\NormalizeStringCapableTrait;
 use Dhii\Util\String\StringableInterface as Stringable;
 use Traversable;
 
@@ -12,14 +18,65 @@ use Traversable;
  */
 class RecursiveIteration extends AbstractBaseIteration implements RecursiveIterationInterface
 {
-    /**
-     * An array of path segments.
+    /* Awareness of path segments.
      *
      * @since [*next-version*]
-     *
-     * @var array
      */
-    protected $path;
+    use PathSegmentsAwareTrait;
+
+    /* Ability to calculate depth from segments.
+     *
+     * @since [*next-version*]
+     */
+    use GetDepthCapableTrait;
+
+    /* Ability to normalize iterables.
+     *
+     * @since [*next-version*]
+     */
+    use NormalizeIterableCapableTrait;
+
+    /* Ability to normalize integers.
+     *
+     * @since [*next-version*]
+     */
+    use NormalizeIntCapableTrait;
+
+    /* Ability to normalize strings.
+     *
+     * @since [*next-version*]
+     */
+    use NormalizeStringCapableTrait;
+
+    /* Ability to count elements in an iterable.
+     *
+     * @since [*next-version*]
+     */
+    use CountIterableCapableTrait;
+
+    /* Ability to resolve iterators.
+     *
+     * @since [*next-version*]
+     */
+    use ResolveIteratorCapableTrait;
+
+    /* Factory of Invalid Argument exceptions.
+     *
+     * @since [*next-version*]
+     */
+    use CreateInvalidArgumentExceptionCapableTrait;
+
+    /* Factory of Out of Range exceptions.
+     *
+     * @since [*next-version*]
+     */
+    use CreateOutOfRangeExceptionCapableTrait;
+
+    /* Ability to translate strings.
+     *
+     * @since [*next-version*]
+     */
+    use StringTranslatingTrait;
 
     /**
      * Constructor.
@@ -44,19 +101,7 @@ class RecursiveIteration extends AbstractBaseIteration implements RecursiveItera
      */
     public function getPathSegments()
     {
-        return $this->path;
-    }
-
-    /**
-     * Sets the path segments.
-     *
-     * @since [*next-version*]
-     *
-     * @param string[]|Stringable[]|Traversable $path A list of path segments.
-     */
-    protected function _setPathSegments($path)
-    {
-        $this->path = $path;
+        return $this->_getPathSegments();
     }
 
     /**
@@ -66,6 +111,6 @@ class RecursiveIteration extends AbstractBaseIteration implements RecursiveItera
      */
     public function getDepth()
     {
-        return count($this->getPathSegments()) - 1;
+        return $this->_getDepth();
     }
 }
