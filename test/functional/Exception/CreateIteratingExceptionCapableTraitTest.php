@@ -2,7 +2,7 @@
 
 namespace Dhii\Iterator\FuncTest;
 
-use Dhii\Iterator\Exception\CreateIteratingExceptionCapableTrait as TestSubject;
+use Dhii\Iterator\CreateIteratingExceptionCapableTrait as TestSubject;
 use Xpmock\TestCase;
 use PHPUnit_Framework_MockObject_MockObject as MockObject;
 
@@ -18,7 +18,7 @@ class CreateIteratingExceptionCapableTraitTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\Iterator\Exception\CreateIteratingExceptionCapableTrait';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\Iterator\CreateIteratingExceptionCapableTrait';
 
     /**
      * Creates a new instance of the test subject.

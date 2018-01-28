@@ -1,8 +1,8 @@
 <?php
 
-namespace Dhii\Iterator\Exception;
+namespace Dhii\Iterator;
 
-use Dhii\Iterator\IterationInterface;
+use Dhii\Iterator\Exception\IterationException;
 use Dhii\Util\String\StringableInterface as Stringable;
 use Exception as RootException;
 
@@ -23,7 +23,7 @@ trait CreateIterationExceptionCapableTrait
      * @param RootException|null      $previous  The previous exception for chaining, if any.
      * @param IterationInterface|null $iteration The iteration instance, if any.
      *
-     * @return IteratingException The created exception instance.
+     * @return IterationException The created exception instance.
      */
     protected function _createIterationException(
         $message = null,

@@ -1,7 +1,8 @@
 <?php
 
-namespace Dhii\Iterator\Exception;
+namespace Dhii\Iterator;
 
+use Dhii\Iterator\Exception\IteratingException;
 use Dhii\Util\String\StringableInterface as Stringable;
 use Exception as RootException;
 
