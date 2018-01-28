@@ -15,7 +15,7 @@
         "php": "^5.4 | ^7.0",
         "dhii/iterator-interface": "^0.1",
         "dhii/iterator-abstract": "^0.1",
-        "dhii/data-key-value-aware-abstract": "^0.1",
+        "dhii/data-key-value-aware-abstract": "^0.1-alpha2",
         "dhii/normalization-helper-base": "^0.1",
         "dhii/exception-helper-base": "^0.1",
         "dhii/i18n-helper-base": "^0.1",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "17998868dbd1e1a2331d1fad979ef324",
+    "content-hash": "da495dd853b04b1b6aa3619aab18e61b",
     "packages": [
         {
             "name": "dhii/data-hierarchy-interface",
@@ -50,16 +50,16 @@
         },
         {
             "name": "dhii/data-key-value-aware-abstract",
-            "version": "dev-develop",
+            "version": "v0.1-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/data-key-value-aware-abstract.git",
-                "reference": "a6ce76a9da1070261751a6da26aeb9dd770b422c"
+                "reference": "36411d00216443cad359f4df2aaf1de831434992"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/data-key-value-aware-abstract/zipball/a6ce76a9da1070261751a6da26aeb9dd770b422c",
-                "reference": "a6ce76a9da1070261751a6da26aeb9dd770b422c",
+                "url": "https://api.github.com/repos/Dhii/data-key-value-aware-abstract/zipball/36411d00216443cad359f4df2aaf1de831434992",
+                "reference": "36411d00216443cad359f4df2aaf1de831434992",
                 "shasum": ""
             },
             "require": {
@@ -68,6 +68,7 @@
             "require-dev": {
                 "codeclimate/php-test-reporter": "<=0.3.2",
                 "dhii/php-cs-fixer-config": "dev-php-5.3",
+                "dhii/stringable-interface": "^0.1",
                 "phpunit/phpunit": "^4.8",
                 "ptrofimov/xpmock": "^1.1"
             },
@@ -93,7 +94,7 @@
                 }
             ],
             "description": "Traits for objects that are aware of a key, a value, or both.",
-            "time": "2018-01-15T10:25:49+00:00"
+            "time": "2018-01-28T23:03:25+00:00"
         },
         {
             "name": "dhii/data-key-value-aware-interface",
@@ -571,7 +572,7 @@
         },
         {
             "name": "dhii/normalization-helper-base",
-            "version": "dev-develop",
+            "version": "v0.1-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/normalization-helper-base.git",
