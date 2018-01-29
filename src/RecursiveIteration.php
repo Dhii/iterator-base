@@ -89,9 +89,9 @@ class RecursiveIteration extends AbstractBaseIteration implements RecursiveItera
      */
     public function __construct($key, $value, $path = [])
     {
-        $this->_setKey($key)
-             ->_setValue($value)
-             ->_setPathSegments($path);
+        $this->_setKey($key);
+        $this->_setValue($value);
+        $this->_setPathSegments($path);
     }
 
     /**

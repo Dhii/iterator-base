@@ -41,7 +41,7 @@ class Iteration extends AbstractBaseIteration
      */
     public function __construct($key, $value)
     {
-        $this->_setKey($key)
-             ->_setValue($value);
+        $this->_setKey($key);
+        $this->_setValue($value);
     }
 }
