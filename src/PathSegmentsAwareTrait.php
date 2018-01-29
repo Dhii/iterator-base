@@ -28,6 +28,13 @@ trait PathSegmentsAwareTrait
      */
     protected function _setPathSegments($segments)
     {
+        /*
+         * `PathSegmentsAwareInterface#getPathSegments()` disallows `stdClass`.
+         */
+        if ($segments instanceof stdClass) {
+            $segments = (array) $segments;
+        }
+
         $segments = $this->_normalizeIterable($segments);
 
         $this->pathSegments = $segments;
