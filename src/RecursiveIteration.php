@@ -9,6 +9,8 @@ use Dhii\Util\Normalization\NormalizeIntCapableTrait;
 use Dhii\Util\Normalization\NormalizeIterableCapableTrait;
 use Dhii\Util\Normalization\NormalizeStringCapableTrait;
 use Dhii\Util\String\StringableInterface as Stringable;
+use InvalidArgumentException;
+use stdClass;
 use Traversable;
 
 /**
@@ -83,9 +85,11 @@ class RecursiveIteration extends AbstractBaseIteration implements RecursiveItera
      *
      * @since [*next-version*]
      *
-     * @param string|int|null                   $key   The iteration key.
-     * @param mixed                             $value The iteration value.
-     * @param string[]|Stringable[]|Traversable $path  A list of path segments.
+     * @param string|int|null                            $key   The iteration key.
+     * @param mixed                                      $value The iteration value.
+     * @param string[]|Stringable[]|Traversable|stdClass $path  A list of path segments.
+     *
+     * @throws InvalidArgumentException If the key, or the path segment list, is invalid.
      */
     public function __construct($key, $value, $path = [])
     {

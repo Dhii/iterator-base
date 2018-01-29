@@ -5,6 +5,8 @@ namespace Dhii\Iterator;
 use Dhii\Exception\CreateInvalidArgumentExceptionCapableTrait;
 use Dhii\I18n\StringTranslatingTrait;
 use Dhii\Util\Normalization\NormalizeStringCapableTrait;
+use InvalidArgumentException;
+use Dhii\Util\String\StringableInterface as Stringable;
 
 /**
  * Concrete implementation of an iteration.
@@ -36,8 +38,10 @@ class Iteration extends AbstractBaseIteration
      *
      * @since [*next-version*]
      *
-     * @param string|int|null $key   The iteration key.
-     * @param mixed           $value The iteration value.
+     * @param string|int|float|bool|Stringable|null $key   The iteration key.
+     * @param mixed                                 $value The iteration value.
+     *
+     * @throws InvalidArgumentException If key is invalid.
      */
     public function __construct($key, $value)
     {

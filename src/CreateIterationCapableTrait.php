@@ -2,6 +2,8 @@
 
 namespace Dhii\Iterator;
 
+use Dhii\Util\String\StringableInterface as Stringable;
+
 /**
  * Functionality for creating iterations.
  *
@@ -10,8 +12,12 @@ namespace Dhii\Iterator;
 trait CreateIterationCapableTrait
 {
     /**
-     * @param $key
-     * @param mixed $value
+     * Creates a new iteration.
+     *
+     * @since [*next-version*]
+     *
+     * @param string|int|float|bool|Stringable|null $key   The key for the iteration.
+     * @param mixed                                 $value The value for the iteration.
      *
      * @return Iteration The new iteration.
      */

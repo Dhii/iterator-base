@@ -2,7 +2,8 @@
 
 namespace Dhii\Iterator;
 
-use Dhii\Util\String\StringableInterface;
+use Dhii\Util\String\StringableInterface as Stringable;
+use Traversable;
 
 /**
  * Common functionality for objects that can create recursive iteration instances.
@@ -16,11 +17,11 @@ trait CreateRecursiveIterationCapableTrait
      *
      * @since [*next-version*]
      *
-     * @param string|StringableInterface|null $key          The iteration key, if any.
-     * @param mixed|null                      $value        The iteration value, if any.
-     * @param string[]|StringableInterface[]  $pathSegments The segments of the path to the iteration.
+     * @param string|Stringable|null            $key          The iteration key.
+     * @param mixed                             $value        The iteration value.
+     * @param string[]|Stringable[]|Traversable $pathSegments The segments of the path to the iteration.
      *
-     * @return RecursiveIterationInterface The created instance.
+     * @return RecursiveIteration The created instance.
      */
     protected function _createRecursiveIteration($key, $value, $pathSegments = [])
     {
