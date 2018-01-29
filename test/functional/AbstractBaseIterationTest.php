@@ -28,7 +28,10 @@ class AbstractBaseIterationTest extends TestCase
      */
     public function createInstance()
     {
-        $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME);
+        $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
+            ->_normalizeString(function ($string) {
+                return (string) $string;
+            });
 
         return $mock->new();
     }

@@ -24,10 +24,17 @@ trait PathSegmentsAwareTrait
      *
      * @since [*next-version*]
      *
-     * @param string[]|Stringable[]|Traversable $segments A list of path segments.
+     * @param string[]|Stringable[]|Traversable|stdClass $segments A list of path segments.
      */
     protected function _setPathSegments($segments)
     {
+        /*
+         * `PathSegmentsAwareInterface#getPathSegments()` disallows `stdClass`.
+         */
+        if ($segments instanceof stdClass) {
+            $segments = (array) $segments;
+        }
+
         $segments = $this->_normalizeIterable($segments);
 
         $this->pathSegments = $segments;

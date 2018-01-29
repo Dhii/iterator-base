@@ -1,8 +1,8 @@
 <?php
 
-namespace Dhii\Iterator\UnitTest;
+namespace Dhii\Iterator\FuncTest;
 
-use Dhii\Iterator\PathSegmentsAwareTrait as TestSubject;
+use Dhii\Iterator\CreateIterationCapableTrait as TestSubject;
 use Xpmock\TestCase;
 use Exception as RootException;
 use PHPUnit_Framework_MockObject_MockObject as MockObject;
@@ -13,14 +13,14 @@ use PHPUnit_Framework_MockObject_MockBuilder as MockBuilder;
  *
  * @since [*next-version*]
  */
-class PathSegmentsAwareTraitTest extends TestCase
+class CreateIterationCapableTraitTest extends TestCase
 {
     /**
      * The class name of the test subject.
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\Iterator\PathSegmentsAwareTrait';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\Iterator\CreateIterationCapableTrait';
 
     /**
      * Creates a new instance of the test subject.
@@ -76,7 +76,7 @@ class PathSegmentsAwareTraitTest extends TestCase
      * @param string $className      Name of the class for the mock to extend.
      * @param string $interfaceNames Names of the interfaces for the mock to implement.
      *
-     * @return MockBuilder The builder of the mock that extends and implements the specified class and interfaces.
+     * @return MockBuilder The builder for an object that extends and implements the specified class and interfaces.
      */
     public function mockClassAndInterfaces($className, $interfaceNames = [])
     {
@@ -126,78 +126,22 @@ class PathSegmentsAwareTraitTest extends TestCase
     }
 
     /**
-     * Tests that `_setPathSegments()` works as expected.
+     * Tests that `_createIteration()` works as expected.
      *
      * @since [*next-version*]
      */
-    public function testSetPathSegments()
+    public function testCreateIteration()
     {
-        $segments = array_fill(0, rand(1, 9), uniqid('segment'));
-        $subject = $this->createInstance();
+        $key = uniqid('key');
+        $val = uniqid('val');
+
+        $subject = $this->createInstance(['_normalizeString']);
         $_subject = $this->reflect($subject);
 
-        $subject->expects($this->exactly(1))
-                ->method('_normalizeIterable')
-                ->with($segments)
-                ->will($this->returnValue($segments));
-
-        $_subject->pathSegments = null;
-        $_subject->_setPathSegments($segments);
-        $this->assertEquals($segments, $_subject->pathSegments, 'Path segments were not set correctly');
-    }
-
-    /**
-     * Tests that `_setPathSegments()` works as expected when given an `stdClass` object.
-     *
-     * @since [*next-version*]
-     */
-    public function testSetPathSegmentsObject()
-    {
-        $segments = array_fill(0, rand(1, 9), uniqid('segment'));
-        $object = (object) $segments;
-        $subject = $this->createInstance();
-        $_subject = $this->reflect($subject);
-
-        $subject->expects($this->exactly(1))
-            ->method('_normalizeIterable')
-            ->with($segments)
-            ->will($this->returnValue($segments));
-
-        $_subject->pathSegments = null;
-        $_subject->_setPathSegments($object);
-        $this->assertEquals($segments, $_subject->pathSegments, 'Path segments were not set correctly');
-    }
-
-    /**
-     * Tests that `_getPathSegments()` works as expected when segments are set.
-     *
-     * @since [*next-version*]
-     */
-    public function testGetPathSegments()
-    {
-        $segments = array_fill(0, rand(1, 9), uniqid('segment'));
-        $subject = $this->createInstance();
-        $_subject = $this->reflect($subject);
-
-        $_subject->pathSegments = $segments;
-
-        $result = $_subject->_getPathSegments();
-        $this->assertEquals($segments, $result, 'Path segments were not set correctly');
-    }
-
-    /**
-     * Tests that `_getPathSegments()` works as expected when segments are not set.
-     *
-     * @since [*next-version*]
-     */
-    public function testGetPathSegmentsDefault()
-    {
-        $subject = $this->createInstance();
-        $_subject = $this->reflect($subject);
-
-        $_subject->pathSegments = null;
-
-        $result = $_subject->_getPathSegments();
-        $this->assertEquals([], $result, 'Path segments were not set correctly');
+        $result = $_subject->_createIteration($key, $val);
+        /* @var $result \Dhii\Iterator\IterationInterface */
+        $this->assertInstanceOf('Dhii\Iterator\IterationInterface', $result, 'Subject did not create a valid iteration');
+        $this->assertEquals($key, $result->getKey(), 'The produced iteration does not have the correct key');
+        $this->assertEquals($val, $result->getValue(), 'The produced iteration does not have the correct value');
     }
 }
