@@ -147,6 +147,28 @@ class PathSegmentsAwareTraitTest extends TestCase
     }
 
     /**
+     * Tests that `_setPathSegments()` works as expected when given an `stdClass` object.
+     *
+     * @since [*next-version*]
+     */
+    public function testSetPathSegmentsObject()
+    {
+        $segments = array_fill(0, rand(1, 9), uniqid('segment'));
+        $object = (object) $segments;
+        $subject = $this->createInstance();
+        $_subject = $this->reflect($subject);
+
+        $subject->expects($this->exactly(1))
+            ->method('_normalizeIterable')
+            ->with($segments)
+            ->will($this->returnValue($segments));
+
+        $_subject->pathSegments = null;
+        $_subject->_setPathSegments($object);
+        $this->assertEquals($segments, $_subject->pathSegments, 'Path segments were not set correctly');
+    }
+
+    /**
      * Tests that `_getPathSegments()` works as expected when segments are set.
      *
      * @since [*next-version*]
