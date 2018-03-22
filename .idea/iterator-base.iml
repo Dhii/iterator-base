@@ -10,7 +10,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/data-hierarchy-interface" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/exception" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/exception-helper-base" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/i18n-helper-base" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/i18n-interface" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/iterator-helper-base" />
