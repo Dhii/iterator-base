@@ -5,7 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [[*next-version*]] - YYYY-MM-DD
-## Changed
+
+## [0.1-alpha3] - 2018-03-22
+### Changed
 - Depending on a more recent version of `dhii/iterator-helper-base`.
 - Replaced deprecated dependency `dhii/exception-helper-base` with `dhii/exception`.
 
